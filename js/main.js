@@ -8,9 +8,12 @@
         Preloader
     --------------------*/
     $(window).on('load', function () {
-        $(".loader").fadeOut();
-        $("#preloder").delay(200).fadeOut("slow");
+        // Using setTimeout for faster fading out
+        setTimeout(function () {
+            $(".loader, #preloder").fadeOut("fast");
+        }, 150); // Delay reduced to 200 milliseconds
     });
+    
 
     /*------------------
         Background Set
@@ -22,11 +25,11 @@
 
     // Search model
     $('.search-switch').on('click', function () {
-        $('.search-model').fadeIn(400);
+        $('.search-model').fadeIn(300);
     });
 
     $('.search-close-switch').on('click', function () {
-        $('.search-model').fadeOut(400, function () {
+        $('.search-model').fadeOut(300, function () {
             $('#search-input').val('');
         });
     });
@@ -80,7 +83,7 @@
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',
         navText: ['<span class="arrow_carrot-left"></span>', '<span class="arrow_carrot-right"></span>'],
-        smartSpeed: 1200,
+        smartSpeed: 1000,
         autoHeight: false,
         autoplay: true
     });
@@ -96,7 +99,7 @@
         nav: true,
         navText: ['<span class="arrow_carrot-left"></span>', '<span class="arrow_carrot-right"></span>'],
         stagePadding: 120,
-        smartSpeed: 1200,
+        smartSpeed: 1000,
         autoHeight: false,
         autoplay: true,
         responsive: {
