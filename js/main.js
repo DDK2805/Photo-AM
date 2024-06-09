@@ -13,7 +13,16 @@
             $(".loader, #preloder").fadeOut("fast");
         }, 150); // Delay reduced to 200 milliseconds
     });
-    
+
+    $(document).ready(function() {
+        // Hide the preloader once the content is fully loaded
+        $(window).on('load', function() {
+            $('#preloder').fadeOut('slow');
+        });
+    });
+ 
+
+
 
     /*------------------
         Background Set
