@@ -156,7 +156,7 @@ ol {
 	border: none;
 }
 
-/* Preloder */
+/* Preloader */
 #preloder {
 	position: fixed;
 	width: 100%;
@@ -170,13 +170,26 @@ ol {
 	align-items: center;
 }
 
+/* Loader */
 .loader {
-	width: 40px;
-	height: 40px;
+	width: 10vw; /* Adjusted size for responsiveness */
+	height: 10vw; /* Adjusted size for responsiveness */
+	max-width: 40px; /* Ensures loader doesn't get too big on larger screens */
+	max-height: 40px; /* Ensures loader doesn't get too big on larger screens */
 	border-radius: 50%;
 	border: 4px solid #f44336;
 	border-left-color: transparent;
 	animation: loader 0.8s linear infinite;
+}
+
+/* Media queries for smaller devices */
+@media (max-width: 600px) {
+	.loader {
+		width: 15vw; /* Adjust size for smaller screens */
+		height: 15vw; /* Adjust size for smaller screens */
+		max-width: 30px; /* Adjust max size for smaller screens */
+		max-height: 30px; /* Adjust max size for smaller screens */
+	}
 }
 
 @keyframes loader {
